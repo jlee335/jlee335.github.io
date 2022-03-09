@@ -1,11 +1,8 @@
 ---
+layout: post
 title: "Test Page for Hyunjae's blog"
-layout: page
-permalink: /posts/
-header: 
-  This is a header..
-categories:
-  - misc
+date: 2022-03-10
+categories: misc
 ---
 
 # This is a test page
