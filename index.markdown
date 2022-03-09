@@ -18,12 +18,3 @@ layout: home
 </ul>
 
 
-## Pages
-
-<ul>
-    {% for page in site.pages %}
-    <li>
-        <a href="{{ post.url }}">{{ page.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
