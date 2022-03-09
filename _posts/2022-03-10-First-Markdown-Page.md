@@ -1,7 +1,12 @@
-layout: page
+---
 title: "Test Page for Hyunjae's blog"
+layout: page
 permalink: /posts/
-
+header: 
+  This is a header..
+categories:
+  - misc
+---
 
 # This is a test page
 
