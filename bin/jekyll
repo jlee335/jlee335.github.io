@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+# Load taint shim before Jekyll/Liquid (Ruby 3.2+ removed Object#tainted?)
+require_relative File.join(__dir__, "..", "ruby_taint_shim")
+require "bundler/setup"
+load Gem.bin_path("jekyll", "jekyll")

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <canvas id="neural-canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="profile-media">
+                <button class="profile-img-button" type="button" id="background-toggle" aria-pressed="false" aria-label="Toggle background simulation">
+                    <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile Picture" class="profile-img" id="profile-image">
+                </button>
+            </div>
+            <h1>Hyunjae Lee</h1>
+            <p class="subtitle">Masters Student | KAIST CASYS</p>
+            <p class="contact"><a href="mailto:hjlee@casys.kaist.ac.kr">hjlee@casys.kaist.ac.kr</a> · <a href="https://www.linkedin.com/in/hyunjae-lee-640b17204/">LinkedIn</a></p>
+        </header>
+
+        <main>
+            {% for section in site.sections %}
+            <section id="{{ section.title | slugify }}">
+                <h2>{{ section.title }}</h2>
+                <div class="content">
+                    {{ section.content }}
+                </div>
+            </section>
+            <hr>
+            {% endfor %}
+        </main>
+
+        <footer>
+            <p>&copy; 2026. Built with Jekyll.</p>
+        </footer>
+    </div>
+
+    <script src="{{ '/assets/js/background.js' | relative_url }}"></script>
+</body>
+</html>

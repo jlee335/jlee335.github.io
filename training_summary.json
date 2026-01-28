@@ -1,0 +1,3599 @@
+{
+  "total_variants": 12,
+  "total_time": 645.2159729003906,
+  "generations": 50,
+  "shared_gene_pool": true,
+  "output_file": "./pretrained_weights.json",
+  "top_20_variant_sources": {
+    "ar16x9_food3": 14,
+    "ar4x3_food2": 3,
+    "ar21x9_food3": 2,
+    "ar4x3_food3": 1
+  },
+  "generation_stats": [
+    {
+      "generation": 2,
+      "global_avg": 44.30083333333334,
+      "global_max": 181.0,
+      "global_top10_avg": 159.1,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 14.56,
+          "max_fitness": 55.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 52.54,
+          "max_fitness": 141.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 45.745,
+          "max_fitness": 93.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 28.255,
+          "max_fitness": 103.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 78.05,
+          "max_fitness": 169.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 64.995,
+          "max_fitness": 135.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 15.49,
+          "max_fitness": 51.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 54.825,
+          "max_fitness": 116.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 41.885,
+          "max_fitness": 88.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 13.145,
+          "max_fitness": 61.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 42.22,
+          "max_fitness": 153.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 79.9,
+          "max_fitness": 181.0
+        }
+      ],
+      "time": 12.893595933914185
+    },
+    {
+      "generation": 3,
+      "global_avg": 44.14958333333333,
+      "global_max": 162.5,
+      "global_top10_avg": 139.75,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 30.895,
+          "max_fitness": 83.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 62.35,
+          "max_fitness": 149.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 66.375,
+          "max_fitness": 162.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 13.55,
+          "max_fitness": 48.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 37.005,
+          "max_fitness": 81.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 58.32,
+          "max_fitness": 144.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 26.86,
+          "max_fitness": 81.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 54.865,
+          "max_fitness": 139.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 60.62,
+          "max_fitness": 103.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 9.96,
+          "max_fitness": 50.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 34.435,
+          "max_fitness": 129.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 74.56,
+          "max_fitness": 138.5
+        }
+      ],
+      "time": 12.909358024597168
+    },
+    {
+      "generation": 4,
+      "global_avg": 40.7875,
+      "global_max": 162.5,
+      "global_top10_avg": 138.45,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 17.37,
+          "max_fitness": 49.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 42.71,
+          "max_fitness": 135.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 87.775,
+          "max_fitness": 162.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 18.01,
+          "max_fitness": 48.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 35.305,
+          "max_fitness": 79.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 54.205,
+          "max_fitness": 157.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 19.39,
+          "max_fitness": 76.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 61.705,
+          "max_fitness": 105.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 32.505,
+          "max_fitness": 93.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 30.235,
+          "max_fitness": 97.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 32.8,
+          "max_fitness": 97.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 57.44,
+          "max_fitness": 123.0
+        }
+      ],
+      "time": 13.174445629119873
+    },
+    {
+      "generation": 5,
+      "global_avg": 49.9775,
+      "global_max": 184.0,
+      "global_top10_avg": 160.05,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 27.545,
+          "max_fitness": 76.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 38.01,
+          "max_fitness": 78.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 39.595,
+          "max_fitness": 97.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 31.12,
+          "max_fitness": 118.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 59.775,
+          "max_fitness": 126.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 67.57,
+          "max_fitness": 131.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 77.09,
+          "max_fitness": 155.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 30.575,
+          "max_fitness": 68.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 91.42,
+          "max_fitness": 159.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 28.785,
+          "max_fitness": 75.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 29.49,
+          "max_fitness": 66.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 78.755,
+          "max_fitness": 184.0
+        }
+      ],
+      "time": 12.618966817855835
+    },
+    {
+      "generation": 6,
+      "global_avg": 38.45375,
+      "global_max": 164.5,
+      "global_top10_avg": 142.05,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 10.725,
+          "max_fitness": 37.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 32.81,
+          "max_fitness": 100.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 49.22,
+          "max_fitness": 164.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 25.12,
+          "max_fitness": 87.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 44.09,
+          "max_fitness": 100.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 48.125,
+          "max_fitness": 128.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 32.045,
+          "max_fitness": 68.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 42.67,
+          "max_fitness": 135.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 43.53,
+          "max_fitness": 107.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 22.845,
+          "max_fitness": 65.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 48.075,
+          "max_fitness": 121.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 62.19,
+          "max_fitness": 132.5
+        }
+      ],
+      "time": 13.244604110717773
+    },
+    {
+      "generation": 7,
+      "global_avg": 50.90083333333333,
+      "global_max": 188.5,
+      "global_top10_avg": 165.8,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 11.965,
+          "max_fitness": 41.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 36.08,
+          "max_fitness": 85.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 91.11,
+          "max_fitness": 160.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 31.62,
+          "max_fitness": 98.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 39.885,
+          "max_fitness": 82.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 79.96,
+          "max_fitness": 188.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 28.67,
+          "max_fitness": 66.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 59.43,
+          "max_fitness": 119.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 80.595,
+          "max_fitness": 124.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 33.855,
+          "max_fitness": 131.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 49.525,
+          "max_fitness": 165.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 68.115,
+          "max_fitness": 126.0
+        }
+      ],
+      "time": 12.608230352401733
+    },
+    {
+      "generation": 8,
+      "global_avg": 47.490833333333335,
+      "global_max": 208.0,
+      "global_top10_avg": 190.9,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 61.875,
+          "max_fitness": 208.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 34.045,
+          "max_fitness": 77.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 83.9,
+          "max_fitness": 199.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 28.67,
+          "max_fitness": 116.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 45.505,
+          "max_fitness": 182.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 87.66,
+          "max_fitness": 202.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 43.605,
+          "max_fitness": 118.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 37.07,
+          "max_fitness": 85.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 54.765,
+          "max_fitness": 147.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 16.47,
+          "max_fitness": 89.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 33.435,
+          "max_fitness": 94.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 42.89,
+          "max_fitness": 115.0
+        }
+      ],
+      "time": 12.451382875442505
+    },
+    {
+      "generation": 9,
+      "global_avg": 50.333333333333336,
+      "global_max": 194.0,
+      "global_top10_avg": 151.8,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 34.65,
+          "max_fitness": 84.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 58.695,
+          "max_fitness": 122.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 48.695,
+          "max_fitness": 125.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 34.66,
+          "max_fitness": 93.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 55.895,
+          "max_fitness": 119.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 75.23,
+          "max_fitness": 170.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 23.51,
+          "max_fitness": 79.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 81.14,
+          "max_fitness": 194.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 73.985,
+          "max_fitness": 134.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 17.875,
+          "max_fitness": 48.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 30.695,
+          "max_fitness": 101.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 68.97,
+          "max_fitness": 138.0
+        }
+      ],
+      "time": 12.608845233917236
+    },
+    {
+      "generation": 10,
+      "global_avg": 52.848333333333336,
+      "global_max": 283.0,
+      "global_top10_avg": 248.9,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 10.05,
+          "max_fitness": 29.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 39.43,
+          "max_fitness": 121.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 62.08,
+          "max_fitness": 136.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 27.52,
+          "max_fitness": 77.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 32.745,
+          "max_fitness": 112.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 71.89,
+          "max_fitness": 165.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 39.545,
+          "max_fitness": 72.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 49.11,
+          "max_fitness": 122.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 137.565,
+          "max_fitness": 283.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 14.81,
+          "max_fitness": 48.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 65.755,
+          "max_fitness": 156.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 83.68,
+          "max_fitness": 232.0
+        }
+      ],
+      "time": 13.317695379257202
+    },
+    {
+      "generation": 11,
+      "global_avg": 46.40708333333333,
+      "global_max": 211.5,
+      "global_top10_avg": 160.05,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 34.715,
+          "max_fitness": 85.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 47.32,
+          "max_fitness": 87.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 81.605,
+          "max_fitness": 211.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 17.615,
+          "max_fitness": 52.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 41.545,
+          "max_fitness": 96.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 76.42,
+          "max_fitness": 180.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 4.975,
+          "max_fitness": 10.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 34.905,
+          "max_fitness": 76.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 76.075,
+          "max_fitness": 163.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 32.44,
+          "max_fitness": 88.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 49.78,
+          "max_fitness": 120.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 59.49,
+          "max_fitness": 140.5
+        }
+      ],
+      "time": 12.507662773132324
+    },
+    {
+      "generation": 12,
+      "global_avg": 46.53791666666667,
+      "global_max": 197.5,
+      "global_top10_avg": 170.25,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 17.095,
+          "max_fitness": 72.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 53.75,
+          "max_fitness": 131.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 91.72,
+          "max_fitness": 197.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 7.365,
+          "max_fitness": 31.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 60.565,
+          "max_fitness": 130.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 70.34,
+          "max_fitness": 181.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 40.78,
+          "max_fitness": 126.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 32.675,
+          "max_fitness": 61.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 40.77,
+          "max_fitness": 98.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 16.245,
+          "max_fitness": 48.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 62.39,
+          "max_fitness": 150.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 64.76,
+          "max_fitness": 173.5
+        }
+      ],
+      "time": 12.604508876800537
+    },
+    {
+      "generation": 13,
+      "global_avg": 41.22541666666667,
+      "global_max": 167.5,
+      "global_top10_avg": 148.6,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 30.15,
+          "max_fitness": 97.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 44.01,
+          "max_fitness": 90.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 51.745,
+          "max_fitness": 135.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 14.47,
+          "max_fitness": 34.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 38.675,
+          "max_fitness": 102.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 44.785,
+          "max_fitness": 107.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 26.035,
+          "max_fitness": 63.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 17.1,
+          "max_fitness": 42.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 77.185,
+          "max_fitness": 148.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 20.56,
+          "max_fitness": 57.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 47.365,
+          "max_fitness": 121.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 82.625,
+          "max_fitness": 167.5
+        }
+      ],
+      "time": 12.556103944778442
+    },
+    {
+      "generation": 14,
+      "global_avg": 46.16041666666667,
+      "global_max": 179.0,
+      "global_top10_avg": 150.7,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 16.65,
+          "max_fitness": 46.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 41.845,
+          "max_fitness": 111.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 77.785,
+          "max_fitness": 179.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 42.065,
+          "max_fitness": 104.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 18.16,
+          "max_fitness": 51.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 52.6,
+          "max_fitness": 115.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 41.935,
+          "max_fitness": 135.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 59.165,
+          "max_fitness": 132.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 68.12,
+          "max_fitness": 147.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 20.325,
+          "max_fitness": 80.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 42.815,
+          "max_fitness": 100.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 72.46,
+          "max_fitness": 153.0
+        }
+      ],
+      "time": 12.49072790145874
+    },
+    {
+      "generation": 15,
+      "global_avg": 46.0,
+      "global_max": 164.0,
+      "global_top10_avg": 148.4,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 4.91,
+          "max_fitness": 17.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 54.985,
+          "max_fitness": 134.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 51.99,
+          "max_fitness": 155.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 39.26,
+          "max_fitness": 116.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 50.32,
+          "max_fitness": 104.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 77.61,
+          "max_fitness": 164.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 24.34,
+          "max_fitness": 67.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 51.76,
+          "max_fitness": 95.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 53.085,
+          "max_fitness": 87.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 16.43,
+          "max_fitness": 59.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 55.54,
+          "max_fitness": 149.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 71.77,
+          "max_fitness": 155.0
+        }
+      ],
+      "time": 12.674610376358032
+    },
+    {
+      "generation": 16,
+      "global_avg": 43.30458333333333,
+      "global_max": 186.0,
+      "global_top10_avg": 154.55,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 29.705,
+          "max_fitness": 89.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 47.135,
+          "max_fitness": 148.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 57.36,
+          "max_fitness": 142.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 31.43,
+          "max_fitness": 85.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 37.36,
+          "max_fitness": 87.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 61.335,
+          "max_fitness": 140.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 8.36,
+          "max_fitness": 31.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 74.65,
+          "max_fitness": 134.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 65.165,
+          "max_fitness": 186.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 18.315,
+          "max_fitness": 51.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 34.605,
+          "max_fitness": 99.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 54.235,
+          "max_fitness": 116.0
+        }
+      ],
+      "time": 12.563541889190674
+    },
+    {
+      "generation": 17,
+      "global_avg": 41.3525,
+      "global_max": 212.5,
+      "global_top10_avg": 178.7,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 20.735,
+          "max_fitness": 62.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 28.06,
+          "max_fitness": 68.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 63.29,
+          "max_fitness": 123.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 12.685,
+          "max_fitness": 44.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 57.11,
+          "max_fitness": 169.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 66.33,
+          "max_fitness": 212.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 11.02,
+          "max_fitness": 34.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 32.965,
+          "max_fitness": 60.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 50.665,
+          "max_fitness": 90.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 27.03,
+          "max_fitness": 96.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 46.105,
+          "max_fitness": 108.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 80.235,
+          "max_fitness": 212.5
+        }
+      ],
+      "time": 12.770451784133911
+    },
+    {
+      "generation": 18,
+      "global_avg": 41.740833333333335,
+      "global_max": 209.0,
+      "global_top10_avg": 156.5,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 20.09,
+          "max_fitness": 72.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 37.23,
+          "max_fitness": 89.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 62.225,
+          "max_fitness": 142.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 18.96,
+          "max_fitness": 88.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 23.305,
+          "max_fitness": 80.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 68.685,
+          "max_fitness": 130.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 26.54,
+          "max_fitness": 80.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 12.435,
+          "max_fitness": 29.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 63.78,
+          "max_fitness": 133.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 13.985,
+          "max_fitness": 48.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 72.835,
+          "max_fitness": 209.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 80.82,
+          "max_fitness": 169.5
+        }
+      ],
+      "time": 12.716984033584595
+    },
+    {
+      "generation": 19,
+      "global_avg": 45.145833333333336,
+      "global_max": 186.0,
+      "global_top10_avg": 161.3,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 11.66,
+          "max_fitness": 37.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 66.71,
+          "max_fitness": 142.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 91.11,
+          "max_fitness": 173.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 11.85,
+          "max_fitness": 59.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 41.565,
+          "max_fitness": 79.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 65.195,
+          "max_fitness": 145.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 41.59,
+          "max_fitness": 89.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 30.43,
+          "max_fitness": 117.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 54.84,
+          "max_fitness": 133.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 13.55,
+          "max_fitness": 40.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 50.665,
+          "max_fitness": 100.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 62.585,
+          "max_fitness": 186.0
+        }
+      ],
+      "time": 12.643211126327515
+    },
+    {
+      "generation": 20,
+      "global_avg": 49.306666666666665,
+      "global_max": 299.0,
+      "global_top10_avg": 227.05,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 28.695,
+          "max_fitness": 87.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 47.51,
+          "max_fitness": 123.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 108.01,
+          "max_fitness": 299.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 6.325,
+          "max_fitness": 39.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 47.84,
+          "max_fitness": 165.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 78.09,
+          "max_fitness": 180.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 23.065,
+          "max_fitness": 57.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 28.68,
+          "max_fitness": 87.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 77.86,
+          "max_fitness": 203.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 13.01,
+          "max_fitness": 42.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 47.85,
+          "max_fitness": 107.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 84.745,
+          "max_fitness": 129.0
+        }
+      ],
+      "time": 12.638164043426514
+    },
+    {
+      "generation": 21,
+      "global_avg": 56.75,
+      "global_max": 223.5,
+      "global_top10_avg": 193.2,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 22.585,
+          "max_fitness": 96.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 52.65,
+          "max_fitness": 158.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 82.805,
+          "max_fitness": 223.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 41.635,
+          "max_fitness": 132.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 45.015,
+          "max_fitness": 92.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 69.205,
+          "max_fitness": 207.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 53.94,
+          "max_fitness": 172.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 94.26,
+          "max_fitness": 187.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 50.465,
+          "max_fitness": 109.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 24.62,
+          "max_fitness": 83.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 57.225,
+          "max_fitness": 143.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 86.595,
+          "max_fitness": 205.5
+        }
+      ],
+      "time": 12.552288055419922
+    },
+    {
+      "generation": 22,
+      "global_avg": 42.76208333333334,
+      "global_max": 211.0,
+      "global_top10_avg": 169.9,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 19.38,
+          "max_fitness": 55.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 39.05,
+          "max_fitness": 84.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 63.925,
+          "max_fitness": 143.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 19.61,
+          "max_fitness": 64.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 39.72,
+          "max_fitness": 80.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 48.465,
+          "max_fitness": 141.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 24.24,
+          "max_fitness": 77.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 33.445,
+          "max_fitness": 93.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 78.785,
+          "max_fitness": 159.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 21.305,
+          "max_fitness": 58.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 50.065,
+          "max_fitness": 110.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 75.155,
+          "max_fitness": 211.0
+        }
+      ],
+      "time": 12.570847988128662
+    },
+    {
+      "generation": 23,
+      "global_avg": 38.79666666666667,
+      "global_max": 167.0,
+      "global_top10_avg": 144.75,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 9.335,
+          "max_fitness": 32.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 58.475,
+          "max_fitness": 167.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 30.735,
+          "max_fitness": 69.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 18.265,
+          "max_fitness": 50.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 62.955,
+          "max_fitness": 124.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 46.625,
+          "max_fitness": 133.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 14.67,
+          "max_fitness": 59.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 50.995,
+          "max_fitness": 117.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 53.935,
+          "max_fitness": 101.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 26.32,
+          "max_fitness": 79.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 35.525,
+          "max_fitness": 92.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 57.725,
+          "max_fitness": 161.0
+        }
+      ],
+      "time": 12.83789587020874
+    },
+    {
+      "generation": 24,
+      "global_avg": 43.7675,
+      "global_max": 203.5,
+      "global_top10_avg": 172.8,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 8.925,
+          "max_fitness": 32.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 70.01,
+          "max_fitness": 187.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 48.27,
+          "max_fitness": 111.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 16.805,
+          "max_fitness": 49.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 39.14,
+          "max_fitness": 110.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 54.43,
+          "max_fitness": 115.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 11.09,
+          "max_fitness": 36.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 45.805,
+          "max_fitness": 114.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 78.045,
+          "max_fitness": 139.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 21.35,
+          "max_fitness": 102.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 45.1,
+          "max_fitness": 149.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 86.24,
+          "max_fitness": 203.5
+        }
+      ],
+      "time": 12.696996927261353
+    },
+    {
+      "generation": 25,
+      "global_avg": 44.1025,
+      "global_max": 180.5,
+      "global_top10_avg": 152.4,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 28.145,
+          "max_fitness": 101.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 61.36,
+          "max_fitness": 141.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 61.385,
+          "max_fitness": 130.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 27.57,
+          "max_fitness": 89.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 26.35,
+          "max_fitness": 76.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 63.45,
+          "max_fitness": 120.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 4.0,
+          "max_fitness": 17.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 60.37,
+          "max_fitness": 108.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 66.515,
+          "max_fitness": 112.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 24.655,
+          "max_fitness": 70.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 34.305,
+          "max_fitness": 99.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 71.125,
+          "max_fitness": 180.5
+        }
+      ],
+      "time": 12.646513938903809
+    },
+    {
+      "generation": 26,
+      "global_avg": 56.41833333333334,
+      "global_max": 215.0,
+      "global_top10_avg": 190.35,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 10.245,
+          "max_fitness": 26.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 79.26,
+          "max_fitness": 141.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 116.495,
+          "max_fitness": 215.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 16.175,
+          "max_fitness": 60.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 34.675,
+          "max_fitness": 87.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 71.595,
+          "max_fitness": 165.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 34.61,
+          "max_fitness": 84.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 55.745,
+          "max_fitness": 101.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 95.88,
+          "max_fitness": 172.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 30.895,
+          "max_fitness": 74.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 52.44,
+          "max_fitness": 131.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 79.005,
+          "max_fitness": 194.0
+        }
+      ],
+      "time": 13.005734920501709
+    },
+    {
+      "generation": 27,
+      "global_avg": 49.409166666666664,
+      "global_max": 264.0,
+      "global_top10_avg": 199.5,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 23.865,
+          "max_fitness": 76.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 35.51,
+          "max_fitness": 93.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 101.16,
+          "max_fitness": 264.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 8.56,
+          "max_fitness": 42.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 45.075,
+          "max_fitness": 109.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 102.04,
+          "max_fitness": 193.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 20.71,
+          "max_fitness": 41.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 55.3,
+          "max_fitness": 122.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 56.745,
+          "max_fitness": 129.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 27.415,
+          "max_fitness": 79.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 58.855,
+          "max_fitness": 136.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 57.675,
+          "max_fitness": 129.0
+        }
+      ],
+      "time": 13.362226724624634
+    },
+    {
+      "generation": 28,
+      "global_avg": 51.16875,
+      "global_max": 214.0,
+      "global_top10_avg": 177.8,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 19.455,
+          "max_fitness": 51.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 62.475,
+          "max_fitness": 153.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 55.185,
+          "max_fitness": 96.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 25.755,
+          "max_fitness": 78.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 60.3,
+          "max_fitness": 159.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 99.895,
+          "max_fitness": 214.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 30.84,
+          "max_fitness": 83.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 57.425,
+          "max_fitness": 120.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 48.895,
+          "max_fitness": 114.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 47.775,
+          "max_fitness": 141.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 31.595,
+          "max_fitness": 87.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 74.43,
+          "max_fitness": 160.5
+        }
+      ],
+      "time": 13.396445989608765
+    },
+    {
+      "generation": 29,
+      "global_avg": 43.968333333333334,
+      "global_max": 196.0,
+      "global_top10_avg": 159.35,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 43.09,
+          "max_fitness": 124.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 41.095,
+          "max_fitness": 99.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 84.26,
+          "max_fitness": 196.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 20.14,
+          "max_fitness": 67.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 38.245,
+          "max_fitness": 76.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 51.6,
+          "max_fitness": 110.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 42.155,
+          "max_fitness": 118.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 15.475,
+          "max_fitness": 51.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 66.61,
+          "max_fitness": 109.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 17.495,
+          "max_fitness": 47.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 48.425,
+          "max_fitness": 121.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 59.03,
+          "max_fitness": 132.5
+        }
+      ],
+      "time": 13.812839269638062
+    },
+    {
+      "generation": 30,
+      "global_avg": 41.16416666666667,
+      "global_max": 173.0,
+      "global_top10_avg": 162.4,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 23.39,
+          "max_fitness": 68.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 14.265,
+          "max_fitness": 44.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 64.775,
+          "max_fitness": 172.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 16.15,
+          "max_fitness": 58.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 47.985,
+          "max_fitness": 140.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 56.27,
+          "max_fitness": 154.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 20.27,
+          "max_fitness": 45.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 43.015,
+          "max_fitness": 83.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 81.495,
+          "max_fitness": 173.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 17.675,
+          "max_fitness": 66.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 44.505,
+          "max_fitness": 126.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 64.175,
+          "max_fitness": 133.0
+        }
+      ],
+      "time": 12.845109939575195
+    },
+    {
+      "generation": 31,
+      "global_avg": 48.85166666666667,
+      "global_max": 194.5,
+      "global_top10_avg": 183.55,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 9.65,
+          "max_fitness": 45.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 27.505,
+          "max_fitness": 87.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 49.705,
+          "max_fitness": 119.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 28.525,
+          "max_fitness": 112.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 47.18,
+          "max_fitness": 115.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 70.66,
+          "max_fitness": 150.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 16.235,
+          "max_fitness": 64.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 48.045,
+          "max_fitness": 94.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 124.745,
+          "max_fitness": 194.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 43.835,
+          "max_fitness": 137.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 53.81,
+          "max_fitness": 141.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 66.325,
+          "max_fitness": 161.0
+        }
+      ],
+      "time": 12.608833074569702
+    },
+    {
+      "generation": 32,
+      "global_avg": 45.80166666666667,
+      "global_max": 206.0,
+      "global_top10_avg": 166.9,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 16.865,
+          "max_fitness": 50.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 47.555,
+          "max_fitness": 124.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 47.32,
+          "max_fitness": 109.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 19.605,
+          "max_fitness": 71.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 41.535,
+          "max_fitness": 93.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 86.645,
+          "max_fitness": 157.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 31.915,
+          "max_fitness": 88.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 70.155,
+          "max_fitness": 120.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 50.24,
+          "max_fitness": 125.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 17.08,
+          "max_fitness": 46.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 39.33,
+          "max_fitness": 106.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 81.375,
+          "max_fitness": 206.0
+        }
+      ],
+      "time": 13.121729612350464
+    },
+    {
+      "generation": 33,
+      "global_avg": 49.46208333333333,
+      "global_max": 205.0,
+      "global_top10_avg": 169.8,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 28.4,
+          "max_fitness": 98.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 62.14,
+          "max_fitness": 146.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 86.24,
+          "max_fitness": 179.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 31.62,
+          "max_fitness": 85.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 29.535,
+          "max_fitness": 93.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 80.215,
+          "max_fitness": 173.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 26.235,
+          "max_fitness": 88.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 28.89,
+          "max_fitness": 65.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 89.4,
+          "max_fitness": 205.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 25.63,
+          "max_fitness": 84.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 43.315,
+          "max_fitness": 122.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 61.925,
+          "max_fitness": 156.0
+        }
+      ],
+      "time": 13.218125104904175
+    },
+    {
+      "generation": 34,
+      "global_avg": 52.10583333333334,
+      "global_max": 238.0,
+      "global_top10_avg": 201.8,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 28.43,
+          "max_fitness": 78.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 51.125,
+          "max_fitness": 106.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 110.84,
+          "max_fitness": 238.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 40.88,
+          "max_fitness": 96.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 37.97,
+          "max_fitness": 104.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 48.485,
+          "max_fitness": 95.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 14.69,
+          "max_fitness": 32.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 66.715,
+          "max_fitness": 147.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 88.515,
+          "max_fitness": 187.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 26.95,
+          "max_fitness": 87.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 45.125,
+          "max_fitness": 118.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 65.545,
+          "max_fitness": 140.5
+        }
+      ],
+      "time": 13.15175485610962
+    },
+    {
+      "generation": 35,
+      "global_avg": 50.4925,
+      "global_max": 191.0,
+      "global_top10_avg": 164.35,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 27.14,
+          "max_fitness": 76.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 48.615,
+          "max_fitness": 146.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 92.55,
+          "max_fitness": 191.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 40.2,
+          "max_fitness": 109.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 45.525,
+          "max_fitness": 103.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 65.035,
+          "max_fitness": 109.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 48.85,
+          "max_fitness": 114.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 44.575,
+          "max_fitness": 84.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 52.915,
+          "max_fitness": 128.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 21.75,
+          "max_fitness": 60.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 50.085,
+          "max_fitness": 104.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 68.67,
+          "max_fitness": 146.0
+        }
+      ],
+      "time": 12.89561915397644
+    },
+    {
+      "generation": 36,
+      "global_avg": 51.867916666666666,
+      "global_max": 187.5,
+      "global_top10_avg": 154.35,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 37.815,
+          "max_fitness": 98.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 53.41,
+          "max_fitness": 107.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 86.5,
+          "max_fitness": 187.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 45.755,
+          "max_fitness": 116.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 45.76,
+          "max_fitness": 90.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 61.0,
+          "max_fitness": 113.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 38.535,
+          "max_fitness": 99.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 52.72,
+          "max_fitness": 94.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 93.865,
+          "max_fitness": 158.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 15.595,
+          "max_fitness": 62.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 29.23,
+          "max_fitness": 86.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 62.23,
+          "max_fitness": 137.5
+        }
+      ],
+      "time": 12.869909763336182
+    },
+    {
+      "generation": 37,
+      "global_avg": 56.5975,
+      "global_max": 227.0,
+      "global_top10_avg": 175.15,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 42.305,
+          "max_fitness": 107.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 65.04,
+          "max_fitness": 176.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 88.255,
+          "max_fitness": 158.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 25.815,
+          "max_fitness": 118.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 66.455,
+          "max_fitness": 163.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 76.135,
+          "max_fitness": 149.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 22.34,
+          "max_fitness": 70.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 34.34,
+          "max_fitness": 54.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 88.41,
+          "max_fitness": 163.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 15.955,
+          "max_fitness": 44.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 66.85,
+          "max_fitness": 142.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 87.27,
+          "max_fitness": 227.0
+        }
+      ],
+      "time": 12.969578981399536
+    },
+    {
+      "generation": 38,
+      "global_avg": 51.19541666666667,
+      "global_max": 189.5,
+      "global_top10_avg": 174.15,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 21.79,
+          "max_fitness": 57.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 75.065,
+          "max_fitness": 177.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 79.925,
+          "max_fitness": 154.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 7.625,
+          "max_fitness": 23.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 64.73,
+          "max_fitness": 141.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 71.79,
+          "max_fitness": 171.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 52.93,
+          "max_fitness": 173.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 51.605,
+          "max_fitness": 122.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 45.55,
+          "max_fitness": 118.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 18.695,
+          "max_fitness": 63.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 49.91,
+          "max_fitness": 189.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 74.73,
+          "max_fitness": 145.5
+        }
+      ],
+      "time": 13.235791206359863
+    },
+    {
+      "generation": 39,
+      "global_avg": 53.29541666666667,
+      "global_max": 205.0,
+      "global_top10_avg": 189.4,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 46.125,
+          "max_fitness": 130.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 46.295,
+          "max_fitness": 93.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 42.81,
+          "max_fitness": 99.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 49.67,
+          "max_fitness": 160.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 39.275,
+          "max_fitness": 124.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 107.59,
+          "max_fitness": 205.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 24.34,
+          "max_fitness": 72.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 48.04,
+          "max_fitness": 98.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 84.78,
+          "max_fitness": 179.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 18.505,
+          "max_fitness": 83.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 65.255,
+          "max_fitness": 133.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 66.86,
+          "max_fitness": 168.5
+        }
+      ],
+      "time": 13.18629503250122
+    },
+    {
+      "generation": 40,
+      "global_avg": 52.35375,
+      "global_max": 208.0,
+      "global_top10_avg": 178.4,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 37.905,
+          "max_fitness": 112.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 50.04,
+          "max_fitness": 129.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 56.445,
+          "max_fitness": 115.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 27.98,
+          "max_fitness": 95.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 41.87,
+          "max_fitness": 101.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 91.695,
+          "max_fitness": 189.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 50.325,
+          "max_fitness": 116.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 77.0,
+          "max_fitness": 148.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 76.17,
+          "max_fitness": 208.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 26.765,
+          "max_fitness": 87.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 41.285,
+          "max_fitness": 136.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 50.765,
+          "max_fitness": 115.5
+        }
+      ],
+      "time": 12.74095892906189
+    },
+    {
+      "generation": 41,
+      "global_avg": 52.322916666666664,
+      "global_max": 204.5,
+      "global_top10_avg": 164.05,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 34.13,
+          "max_fitness": 160.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 61.26,
+          "max_fitness": 136.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 101.185,
+          "max_fitness": 204.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 21.83,
+          "max_fitness": 83.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 46.5,
+          "max_fitness": 121.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 68.725,
+          "max_fitness": 160.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 18.415,
+          "max_fitness": 47.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 60.965,
+          "max_fitness": 128.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 65.5,
+          "max_fitness": 130.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 16.4,
+          "max_fitness": 52.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 67.435,
+          "max_fitness": 131.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 65.53,
+          "max_fitness": 135.0
+        }
+      ],
+      "time": 13.369486808776855
+    },
+    {
+      "generation": 42,
+      "global_avg": 52.90083333333333,
+      "global_max": 196.5,
+      "global_top10_avg": 169.55,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 18.255,
+          "max_fitness": 53.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 37.995,
+          "max_fitness": 91.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 69.84,
+          "max_fitness": 158.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 38.625,
+          "max_fitness": 147.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 56.17,
+          "max_fitness": 138.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 102.285,
+          "max_fitness": 196.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 36.625,
+          "max_fitness": 89.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 58.14,
+          "max_fitness": 144.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 58.32,
+          "max_fitness": 147.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 17.345,
+          "max_fitness": 63.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 49.45,
+          "max_fitness": 147.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 91.76,
+          "max_fitness": 184.0
+        }
+      ],
+      "time": 12.969862937927246
+    },
+    {
+      "generation": 43,
+      "global_avg": 53.44166666666667,
+      "global_max": 201.5,
+      "global_top10_avg": 198.0,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 50.77,
+          "max_fitness": 127.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 70.545,
+          "max_fitness": 143.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 92.225,
+          "max_fitness": 201.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 25.225,
+          "max_fitness": 74.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 31.045,
+          "max_fitness": 79.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 80.12,
+          "max_fitness": 156.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 34.48,
+          "max_fitness": 90.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 53.815,
+          "max_fitness": 200.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 88.095,
+          "max_fitness": 173.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 17.975,
+          "max_fitness": 67.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 29.94,
+          "max_fitness": 67.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 67.065,
+          "max_fitness": 153.5
+        }
+      ],
+      "time": 12.962639093399048
+    },
+    {
+      "generation": 44,
+      "global_avg": 52.735,
+      "global_max": 348.5,
+      "global_top10_avg": 189.25,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 23.495,
+          "max_fitness": 66.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 96.815,
+          "max_fitness": 348.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 60.56,
+          "max_fitness": 119.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 12.45,
+          "max_fitness": 38.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 37.805,
+          "max_fitness": 99.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 63.29,
+          "max_fitness": 152.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 45.255,
+          "max_fitness": 95.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 51.325,
+          "max_fitness": 87.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 74.82,
+          "max_fitness": 144.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 32.605,
+          "max_fitness": 95.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 61.55,
+          "max_fitness": 168.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 72.85,
+          "max_fitness": 159.0
+        }
+      ],
+      "time": 12.734853982925415
+    },
+    {
+      "generation": 45,
+      "global_avg": 49.36125,
+      "global_max": 225.5,
+      "global_top10_avg": 187.95,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 11.145,
+          "max_fitness": 44.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 50.455,
+          "max_fitness": 95.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 58.52,
+          "max_fitness": 151.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 40.725,
+          "max_fitness": 115.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 32.82,
+          "max_fitness": 80.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 82.12,
+          "max_fitness": 174.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 18.9,
+          "max_fitness": 52.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 33.725,
+          "max_fitness": 84.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 97.4,
+          "max_fitness": 204.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 27.2,
+          "max_fitness": 84.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 35.265,
+          "max_fitness": 91.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 104.06,
+          "max_fitness": 225.5
+        }
+      ],
+      "time": 12.882993221282959
+    },
+    {
+      "generation": 46,
+      "global_avg": 56.57791666666667,
+      "global_max": 216.0,
+      "global_top10_avg": 176.25,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 30.815,
+          "max_fitness": 79.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 64.145,
+          "max_fitness": 207.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 71.04,
+          "max_fitness": 185.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 33.755,
+          "max_fitness": 111.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 79.13,
+          "max_fitness": 157.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 75.16,
+          "max_fitness": 144.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 35.305,
+          "max_fitness": 91.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 41.075,
+          "max_fitness": 80.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 93.665,
+          "max_fitness": 161.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 31.82,
+          "max_fitness": 89.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 47.815,
+          "max_fitness": 122.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 75.21,
+          "max_fitness": 216.0
+        }
+      ],
+      "time": 12.669837951660156
+    },
+    {
+      "generation": 47,
+      "global_avg": 59.4,
+      "global_max": 222.0,
+      "global_top10_avg": 200.25,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 23.17,
+          "max_fitness": 55.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 40.935,
+          "max_fitness": 92.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 108.715,
+          "max_fitness": 222.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 25.195,
+          "max_fitness": 74.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 38.05,
+          "max_fitness": 85.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 120.255,
+          "max_fitness": 207.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 25.735,
+          "max_fitness": 62.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 56.12,
+          "max_fitness": 123.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 109.035,
+          "max_fitness": 180.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 27.22,
+          "max_fitness": 88.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 37.785,
+          "max_fitness": 92.0
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 100.585,
+          "max_fitness": 207.5
+        }
+      ],
+      "time": 12.834911108016968
+    },
+    {
+      "generation": 48,
+      "global_avg": 49.739583333333336,
+      "global_max": 174.5,
+      "global_top10_avg": 152.6,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 41.875,
+          "max_fitness": 140.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 61.86,
+          "max_fitness": 162.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 61.435,
+          "max_fitness": 145.5
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 9.385,
+          "max_fitness": 52.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 44.39,
+          "max_fitness": 93.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 48.595,
+          "max_fitness": 107.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 43.47,
+          "max_fitness": 100.0
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 89.72,
+          "max_fitness": 174.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 62.38,
+          "max_fitness": 115.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 8.945,
+          "max_fitness": 37.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 50.915,
+          "max_fitness": 106.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 73.905,
+          "max_fitness": 145.0
+        }
+      ],
+      "time": 12.997373342514038
+    },
+    {
+      "generation": 49,
+      "global_avg": 54.157916666666665,
+      "global_max": 217.5,
+      "global_top10_avg": 197.35,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 16.71,
+          "max_fitness": 60.5
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 63.52,
+          "max_fitness": 151.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 57.295,
+          "max_fitness": 118.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 27.55,
+          "max_fitness": 90.0
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 62.995,
+          "max_fitness": 147.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 114.425,
+          "max_fitness": 217.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 28.515,
+          "max_fitness": 99.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 66.3,
+          "max_fitness": 183.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 95.515,
+          "max_fitness": 184.0
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 20.595,
+          "max_fitness": 83.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 35.205,
+          "max_fitness": 87.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 61.27,
+          "max_fitness": 134.0
+        }
+      ],
+      "time": 12.928155899047852
+    },
+    {
+      "generation": 50,
+      "global_avg": 55.29208333333333,
+      "global_max": 224.5,
+      "global_top10_avg": 190.8,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 27.11,
+          "max_fitness": 74.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 66.075,
+          "max_fitness": 161.5
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 77.94,
+          "max_fitness": 159.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 28.355,
+          "max_fitness": 79.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 81.47,
+          "max_fitness": 191.5
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 92.695,
+          "max_fitness": 224.5
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 44.49,
+          "max_fitness": 120.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 62.855,
+          "max_fitness": 117.5
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 66.01,
+          "max_fitness": 118.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 13.515,
+          "max_fitness": 79.0
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 42.95,
+          "max_fitness": 107.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 60.04,
+          "max_fitness": 141.5
+        }
+      ],
+      "time": 13.312382221221924
+    },
+    {
+      "generation": 51,
+      "global_avg": 54.155,
+      "global_max": 245.0,
+      "global_top10_avg": 194.95,
+      "variants": [
+        {
+          "variant": "ar16x9_food1",
+          "avg_fitness": 36.055,
+          "max_fitness": 97.0
+        },
+        {
+          "variant": "ar16x9_food2",
+          "avg_fitness": 91.7,
+          "max_fitness": 245.0
+        },
+        {
+          "variant": "ar16x9_food3",
+          "avg_fitness": 85.535,
+          "max_fitness": 174.0
+        },
+        {
+          "variant": "ar4x3_food1",
+          "avg_fitness": 16.3,
+          "max_fitness": 75.5
+        },
+        {
+          "variant": "ar4x3_food2",
+          "avg_fitness": 64.075,
+          "max_fitness": 134.0
+        },
+        {
+          "variant": "ar4x3_food3",
+          "avg_fitness": 87.63,
+          "max_fitness": 194.0
+        },
+        {
+          "variant": "ar21x9_food1",
+          "avg_fitness": 14.82,
+          "max_fitness": 77.5
+        },
+        {
+          "variant": "ar21x9_food2",
+          "avg_fitness": 65.995,
+          "max_fitness": 131.0
+        },
+        {
+          "variant": "ar21x9_food3",
+          "avg_fitness": 55.015,
+          "max_fitness": 112.5
+        },
+        {
+          "variant": "ar1x1_food1",
+          "avg_fitness": 24.575,
+          "max_fitness": 99.5
+        },
+        {
+          "variant": "ar1x1_food2",
+          "avg_fitness": 33.335,
+          "max_fitness": 105.5
+        },
+        {
+          "variant": "ar1x1_food3",
+          "avg_fitness": 74.825,
+          "max_fitness": 201.0
+        }
+      ],
+      "time": 13.831969738006592
+    }
+  ],
+  "final_results": [
+    {
+      "variant_name": "ar16x9_food1",
+      "config": {
+        "width": 1920,
+        "height": 1080,
+        "food_count": 1
+      },
+      "generations": 51,
+      "avg_fitness": 2.045,
+      "max_fitness": 6.0
+    },
+    {
+      "variant_name": "ar16x9_food2",
+      "config": {
+        "width": 1920,
+        "height": 1080,
+        "food_count": 2
+      },
+      "generations": 51,
+      "avg_fitness": 6.43,
+      "max_fitness": 10.5
+    },
+    {
+      "variant_name": "ar16x9_food3",
+      "config": {
+        "width": 1920,
+        "height": 1080,
+        "food_count": 3
+      },
+      "generations": 51,
+      "avg_fitness": 11.07,
+      "max_fitness": 23.5
+    },
+    {
+      "variant_name": "ar4x3_food1",
+      "config": {
+        "width": 1440,
+        "height": 1080,
+        "food_count": 1
+      },
+      "generations": 51,
+      "avg_fitness": 4.96,
+      "max_fitness": 12.5
+    },
+    {
+      "variant_name": "ar4x3_food2",
+      "config": {
+        "width": 1440,
+        "height": 1080,
+        "food_count": 2
+      },
+      "generations": 51,
+      "avg_fitness": 6.6,
+      "max_fitness": 21.0
+    },
+    {
+      "variant_name": "ar4x3_food3",
+      "config": {
+        "width": 1440,
+        "height": 1080,
+        "food_count": 3
+      },
+      "generations": 51,
+      "avg_fitness": 8.25,
+      "max_fitness": 18.0
+    },
+    {
+      "variant_name": "ar21x9_food1",
+      "config": {
+        "width": 2520,
+        "height": 1080,
+        "food_count": 1
+      },
+      "generations": 51,
+      "avg_fitness": 4.04,
+      "max_fitness": 7.5
+    },
+    {
+      "variant_name": "ar21x9_food2",
+      "config": {
+        "width": 2520,
+        "height": 1080,
+        "food_count": 2
+      },
+      "generations": 51,
+      "avg_fitness": 6.985,
+      "max_fitness": 10.5
+    },
+    {
+      "variant_name": "ar21x9_food3",
+      "config": {
+        "width": 2520,
+        "height": 1080,
+        "food_count": 3
+      },
+      "generations": 51,
+      "avg_fitness": 9.9,
+      "max_fitness": 18.5
+    },
+    {
+      "variant_name": "ar1x1_food1",
+      "config": {
+        "width": 1080,
+        "height": 1080,
+        "food_count": 1
+      },
+      "generations": 51,
+      "avg_fitness": 4.89,
+      "max_fitness": 10.5
+    },
+    {
+      "variant_name": "ar1x1_food2",
+      "config": {
+        "width": 1080,
+        "height": 1080,
+        "food_count": 2
+      },
+      "generations": 51,
+      "avg_fitness": 6.04,
+      "max_fitness": 13.0
+    },
+    {
+      "variant_name": "ar1x1_food3",
+      "config": {
+        "width": 1080,
+        "height": 1080,
+        "food_count": 3
+      },
+      "generations": 51,
+      "avg_fitness": 7.76,
+      "max_fitness": 16.0
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Please add your profile photo to this directory as "profile.jpg"
+
+Recommended specifications:
+- Format: JPG or PNG
+- Size: At least 300x300 pixels (square)
+- The image will be displayed as a 150x150px circle
+
+You can delete this text file after adding your photo.

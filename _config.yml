@@ -1,0 +1,7 @@
+title: Academic Portfolio
+baseurl: ""
+url: ""
+collections:
+  sections:
+    output: false
+    sort_by: path

@@ -1,0 +1,42 @@
+{
+  "neural_network": {
+    "input_size": 11,
+    "hidden_size": 8,
+    "output_size": 6
+  },
+  "physics": {
+    "fish_speed": 30.0,
+    "damping": 0.992,
+    "max_speed": 180.0,
+    "tick_ms": 120,
+    "physics_dt": 0.016
+  },
+  "fish": {
+    "fish_radius": 6.0,
+    "turn_deg": 30,
+    "visual_range_factor": 0.1,
+    "comm_range_factor": 0.3
+  },
+  "food": {
+    "food_radius": 8.0,
+    "food_speed": 45.0
+  },
+  "communication": {
+    "comm_delay_ms": 100,
+    "signal_threshold": 0.5
+  },
+  "evolution": {
+    "mutation_rate": 0.15,
+    "mutation_strength": 0.5,
+    "survival_rate": 0.5
+  },
+  "simulation": {
+    "fish_count": 20,
+    "food_count": 1,
+    "generation_time": 60.0
+  },
+  "display": {
+    "default_width": 1920,
+    "default_height": 1080
+  }
+}
