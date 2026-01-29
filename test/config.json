@@ -24,9 +24,11 @@
         "base_eat_prob": 1.0,
         "density_weight": 0.7,
         "speed_weight": 0.3,
-        "vision_radius": 100,
+        "vision_radius": 0.5,
+        "vision_pixels": 60,
         "comm_channels": 1
     },
+    "debug": true,
     "evolution": {
         "generations": 20,
         "population_size": 50,

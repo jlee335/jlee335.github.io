@@ -40,7 +40,8 @@
             base_eat_prob: 1.0,
             density_weight: 0.6,
             speed_weight: 0.4,
-            vision_radius: 100,
+            vision_radius: 0.17,
+            vision_pixels: 60,
             comm_channels: 1
         },
         evolution: { generations: 20, population_size: 50, mutation_rate: 0.05 }
@@ -72,11 +73,13 @@
     let FISH_RADIUS_RATIO = 0.013;
     let PREDATOR_RADIUS_RATIO = 0.02;
     let ADJACENT_RADIUS_RATIO = 0.083;
+    let VISION_PIXELS = 60;
+    let VISION_RADIUS = 100;
     let currentAspectRatio = null;
 
     class NeuralNet {
         constructor(weights) {
-            this.w1 = weights.l1_w; // Shape [32, 6]
+            this.w1 = weights.l1_w; // Shape [32, input_size]
             this.b1 = weights.l1_b; // Shape [32]
             this.w2 = weights.l2_w; // Shape [3, 32]
             this.b2 = weights.l2_b; // Shape [3]
@@ -244,43 +247,51 @@
         ctx.closePath();
     }
 
-    function getSensors(agent) {
-        let nearestAllyD = 9999;
-        let allyVec = [0, 0];
+    function getVisionBins(agent) {
+        const enemyBins = new Array(VISION_PIXELS).fill(0);
+        const friendlyBins = new Array(VISION_PIXELS).fill(0);
+        const bestEnemyDistSq = new Array(VISION_PIXELS).fill(Infinity);
+        const bestFriendlyDistSq = new Array(VISION_PIXELS).fill(Infinity);
+        const twoPi = Math.PI * 2;
+        const visionRadiusSq = VISION_RADIUS * VISION_RADIUS;
+
+        const ingestEntity = (entity, isEnemy) => {
+            const dx = entity.x - agent.x;
+            const dy = entity.y - agent.y;
+            const distSq = dx * dx + dy * dy;
+            if (distSq > visionRadiusSq) {
+                return;
+            }
+            let angle = Math.atan2(dy, dx);
+            if (angle < 0) angle += twoPi;
+            let idx = Math.floor((angle / twoPi) * VISION_PIXELS);
+            if (idx >= VISION_PIXELS) idx = VISION_PIXELS - 1;
+            if (isEnemy) {
+                if (distSq < bestEnemyDistSq[idx]) {
+                    bestEnemyDistSq[idx] = distSq;
+                    enemyBins[idx] = Math.sqrt(distSq) / VISION_RADIUS;
+                }
+            } else if (distSq < bestFriendlyDistSq[idx]) {
+                bestFriendlyDistSq[idx] = distSq;
+                friendlyBins[idx] = Math.sqrt(distSq) / VISION_RADIUS;
+            }
+        };
 
         for (let other of agents) {
             if (other === agent || !other.alive) continue;
-            let dx = (other.x - agent.x) / 100;
-            let dy = (other.y - agent.y) / 100;
-            let dist = dx * dx + dy * dy;
-            if (dist < nearestAllyD) {
-                nearestAllyD = dist;
-                allyVec = [dx, dy];
-            }
+            ingestEntity(other, false);
         }
-
-        let nearestPredD = 9999;
-        let predVec = [0, 0];
 
         for (let p of predators) {
-            let dx = (p.x - agent.x) / 100;
-            let dy = (p.y - agent.y) / 100;
-            let dist = dx * dx + dy * dy;
-            if (dist < nearestPredD) {
-                nearestPredD = dist;
-                predVec = [dx, dy];
-            }
+            ingestEntity(p, true);
         }
 
-        const wallX = ((agent.x - simBounds.x) / simBounds.width) * 2 - 1;
-        const wallY = ((agent.y - simBounds.y) / simBounds.height) * 2 - 1;
+        return { enemyBins, friendlyBins };
+    }
 
-        return [
-            allyVec[0], allyVec[1],
-            predVec[0], predVec[1],
-            agent.vx, agent.vy,
-            wallX, wallY
-        ];
+    function getSensors(agent) {
+        const { enemyBins, friendlyBins } = getVisionBins(agent);
+        return enemyBins.concat(friendlyBins);
     }
 
     function clampToRoundedRect(entity) {
@@ -455,6 +466,56 @@
         ctx.fillText(`Predators: ${predators.length}`, simBounds.x + 14, simBounds.y + 30);
         ctx.restore();
 
+        if (config?.debug === true) {
+            const aliveAgents = agents.filter(a => a.alive);
+            if (aliveAgents.length) {
+                let candidates = [];
+                for (const agent of aliveAgents) {
+                    const { enemyBins, friendlyBins } = getVisionBins(agent);
+                    const hasSignal = enemyBins.some(v => v > 0) || friendlyBins.some(v => v > 0);
+                    if (hasSignal) {
+                        candidates.push({ agent, enemyBins, friendlyBins });
+                    }
+                }
+                const selectionPool = candidates.length ? candidates : aliveAgents.map(agent => {
+                    const { enemyBins, friendlyBins } = getVisionBins(agent);
+                    return { agent, enemyBins, friendlyBins };
+                });
+                const chosen = selectionPool[Math.floor(Math.random() * selectionPool.length)];
+                const debugAgent = chosen.agent;
+                const enemyBins = chosen.enemyBins;
+                const friendlyBins = chosen.friendlyBins;
+                const twoPi = Math.PI * 2;
+                ctx.save();
+                ctx.lineWidth = 0.5;
+                ctx.globalAlpha = 0.5;
+                for (let i = 0; i < VISION_PIXELS; i++) {
+                    const angle = ((i + 0.5) / VISION_PIXELS) * twoPi;
+                    const cos = Math.cos(angle);
+                    const sin = Math.sin(angle);
+                    const enemyDist = enemyBins[i];
+                    const friendlyDist = friendlyBins[i];
+                    if (enemyDist > 0) {
+                        const len = enemyDist * VISION_RADIUS;
+                        ctx.strokeStyle = 'rgba(255, 90, 70, 0.6)';
+                        ctx.beginPath();
+                        ctx.moveTo(debugAgent.x, debugAgent.y);
+                        ctx.lineTo(debugAgent.x + cos * len, debugAgent.y + sin * len);
+                        ctx.stroke();
+                    }
+                    if (friendlyDist > 0) {
+                        const len = friendlyDist * VISION_RADIUS;
+                        ctx.strokeStyle = 'rgba(120, 200, 255, 0.6)';
+                        ctx.beginPath();
+                        ctx.moveTo(debugAgent.x, debugAgent.y);
+                        ctx.lineTo(debugAgent.x + cos * len, debugAgent.y + sin * len);
+                        ctx.stroke();
+                    }
+                }
+                ctx.restore();
+            }
+        }
+
         predators.forEach(p => {
             let bestTarget = null;
             let minDist = Infinity;
@@ -619,6 +680,14 @@
                 ADJACENT_RADIUS_RATIO = config.agents.adjacent_radius <= 1 ? config.agents.adjacent_radius : config.agents.adjacent_radius / minDim;
             } else {
                 ADJACENT_RADIUS_RATIO = (FISH_RADIUS_RATIO || 0.013) * 4;
+            }
+            if (Number.isFinite(config.agents.vision_radius)) {
+                VISION_RADIUS = config.agents.vision_radius <= 1
+                    ? config.agents.vision_radius * minDim
+                    : config.agents.vision_radius;
+            }
+            if (Number.isFinite(config.agents.vision_pixels)) {
+                VISION_PIXELS = Math.max(4, Math.round(config.agents.vision_pixels));
             }
             if (Number.isFinite(config.agents.adjacent_max)) {
                 ADJACENT_MAX = config.agents.adjacent_max;

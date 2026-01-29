@@ -58,8 +58,14 @@ class Simulation:
         self.density_weight = self.agents_cfg.get('density_weight', 0.6)
         self.speed_weight = self.agents_cfg.get('speed_weight', 0.4)
         
-        # Inputs: [Ally_dx, Ally_dy, Pred_dx, Pred_dy, Vx, Vy, Wall_x, Wall_y]
-        self.brain = AgentBrain(8, 3).to(DEVICE)
+        self.vision_pixels = int(self.agents_cfg.get('vision_pixels', 60))
+        vision_radius_value = float(self.agents_cfg.get('vision_radius', 0.17))
+        min_dim = min(self.params['width'], self.params['height'])
+        self.vision_radius = vision_radius_value * min_dim if vision_radius_value <= 1 else vision_radius_value
+        self.vision_radius_sq = self.vision_radius * self.vision_radius
+
+        # Inputs: [Enemy distance bins..., Friendly distance bins...] => 2 * vision_pixels
+        self.brain = AgentBrain(self.vision_pixels * 2, 3).to(DEVICE)
         if brain_weights:
             self.brain.load_state_dict(brain_weights)
         
@@ -107,40 +113,42 @@ class Simulation:
         }
 
     def get_sensor_data(self, agent):
-        # 1. Ally & Predator Sensing (Same as before)
-        nearest_ally_d = 9999
-        ally_vec = [0, 0]
+        enemy_bins = np.zeros(self.vision_pixels, dtype=np.float32)
+        friendly_bins = np.zeros(self.vision_pixels, dtype=np.float32)
+        best_enemy_dist_sq = np.full(self.vision_pixels, np.inf, dtype=np.float32)
+        best_friendly_dist_sq = np.full(self.vision_pixels, np.inf, dtype=np.float32)
+        two_pi = 2 * np.pi
+
+        def ingest_entity(entity, is_enemy):
+            dx = entity['x'] - agent['x']
+            dy = entity['y'] - agent['y']
+            dist_sq = dx * dx + dy * dy
+            if dist_sq > self.vision_radius_sq:
+                return
+            angle = np.arctan2(dy, dx)
+            if angle < 0:
+                angle += two_pi
+            idx = int((angle / two_pi) * self.vision_pixels)
+            if idx >= self.vision_pixels:
+                idx = self.vision_pixels - 1
+            if is_enemy:
+                if dist_sq < best_enemy_dist_sq[idx]:
+                    best_enemy_dist_sq[idx] = dist_sq
+                    enemy_bins[idx] = np.sqrt(dist_sq) / self.vision_radius
+            else:
+                if dist_sq < best_friendly_dist_sq[idx]:
+                    best_friendly_dist_sq[idx] = dist_sq
+                    friendly_bins[idx] = np.sqrt(dist_sq) / self.vision_radius
+
         for other in self.agents:
-            if other is agent or not other['alive']: continue
-            dx = (other['x'] - agent['x']) / 100.0
-            dy = (other['y'] - agent['y']) / 100.0
-            dist = dx*dx + dy*dy
-            if dist < nearest_ally_d:
-                nearest_ally_d = dist
-                ally_vec = [dx, dy]
+            if other is agent or not other['alive']:
+                continue
+            ingest_entity(other, False)
 
-        nearest_pred_d = 9999
-        pred_vec = [0, 0]
         for pred in self.predators:
-            dx = (pred['x'] - agent['x']) / 100.0
-            dy = (pred['y'] - agent['y']) / 100.0
-            dist = dx*dx + dy*dy
-            if dist < nearest_pred_d:
-                nearest_pred_d = dist
-                pred_vec = [dx, dy]
+            ingest_entity(pred, True)
 
-        # 2. Wall Sensing (NEW)
-        # Normalize position to -1 (Left/Top) to 1 (Right/Bottom)
-        wall_x = (agent['x'] / self.params['width']) * 2 - 1
-        wall_y = (agent['y'] / self.params['height']) * 2 - 1
-
-        state = np.array([
-            ally_vec[0], ally_vec[1],
-            pred_vec[0], pred_vec[1],
-            agent['vx'], agent['vy'],
-            wall_x, wall_y  # <--- The agents now "know" where they are
-        ], dtype=np.float32)
-        
+        state = np.concatenate([enemy_bins, friendly_bins], axis=0).astype(np.float32)
         return torch.from_numpy(state).to(DEVICE)
 
     def apply_wall_repulsion(self, entity, force=0.5):
@@ -318,7 +326,8 @@ def evaluate(weights):
 if __name__ == '__main__':
     # Increase mutation rate slightly to help them learn the new wall sensors
     pop_size = CONFIG['evolution']['population_size']
-    population = [AgentBrain(8, 3) for _ in range(pop_size)]
+    vision_pixels = int(CONFIG['agents'].get('vision_pixels', 60))
+    population = [AgentBrain(vision_pixels * 2, 3) for _ in range(pop_size)]
     
     print(f"Evolving {CONFIG['evolution']['generations']} generations (Wall-Aware Mode)...")
     
