@@ -70,6 +70,7 @@
     let SPEED_WEIGHT = 0.4;
     let PREDATOR_STUN_SECONDS = 1.0;
     let EDGE_EAT_MARGIN = 30;
+    let FISH_SPEED = 4.0;
     let FISH_RADIUS_RATIO = 0.013;
     let PREDATOR_RADIUS_RATIO = 0.02;
     let ADJACENT_RADIUS_RATIO = 0.083;
@@ -568,8 +569,8 @@
             let inputs = getSensors(a);
             let outputs = brain.forward(inputs);
 
-            a.vx += outputs[0] * 0.5;
-            a.vy += outputs[1] * 0.5;
+            a.vx += outputs[0] * 0.5 * FISH_SPEED;
+            a.vy += outputs[1] * 0.5 * FISH_SPEED;
 
             applyWallRepulsion(a, 0.2);
 
@@ -666,6 +667,9 @@
             }
             if (Number.isFinite(config.agents.edge_eat_margin)) {
                 EDGE_EAT_MARGIN = config.agents.edge_eat_margin;
+            }
+            if (Number.isFinite(config.agents.fish_speed)) {
+                FISH_SPEED = config.agents.fish_speed;
             }
             if (Number.isFinite(config.agents.corner_radius_factor)) {
                 CORNER_RADIUS_FACTOR = config.agents.corner_radius_factor;
