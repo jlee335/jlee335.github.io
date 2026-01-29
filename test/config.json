@@ -1,0 +1,35 @@
+{
+    "simulation": {
+        "width": 800,
+        "height": 600,
+        "duration": 500,
+        "dt": 0.1,
+        "aspect_ratios": [0.75, 1.0, 1.33, 1.6]
+    },
+    "agents": {
+        "fish_count": 30,
+        "predator_count": 3,
+        "fish_speed": 10.0,
+        "predator_speed": 5,
+        "fish_radius": 0.010,
+        "predator_radius": 0.016,
+        "predator_stun_seconds": 5.0,
+        "edge_eat_margin": 50.0,
+        "corner_radius_factor": 0.08,
+        "corner_radius_min": 24.0,
+        "corner_radius_max": 140.0,
+        "adjacent_radius": 0.083,
+        "adjacent_max": 6,
+        "speed_scale": 9.0,
+        "base_eat_prob": 1.0,
+        "density_weight": 0.7,
+        "speed_weight": 0.3,
+        "vision_radius": 100,
+        "comm_channels": 1
+    },
+    "evolution": {
+        "generations": 20,
+        "population_size": 50,
+        "mutation_rate": 0.05
+    }
+}
