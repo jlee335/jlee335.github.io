@@ -53,7 +53,9 @@ class Simulation:
         self.edge_eat_margin = self.agents_cfg.get('edge_eat_margin', 30.0)
         self.adjacent_radius = adjacent_radius_value * min_dim if adjacent_radius_value <= 1 else adjacent_radius_value
         self.adjacent_max = self.agents_cfg.get('adjacent_max', 6)
-        self.speed_scale = self.agents_cfg.get('speed_scale', self.agents_cfg.get('fish_speed', 4.0) * 1.5)
+        self.fish_speed = self.agents_cfg.get('fish_speed', 4.0)
+        self.speed_scale = self.agents_cfg.get('speed_scale', self.fish_speed * 1.5)
+        self.predator_speed = self.agents_cfg.get('predator_speed', 6.5)
         self.base_eat_prob = self.agents_cfg.get('base_eat_prob', 1.0)
         self.density_weight = self.agents_cfg.get('density_weight', 0.6)
         self.speed_weight = self.agents_cfg.get('speed_weight', 0.4)
@@ -152,16 +154,25 @@ class Simulation:
         return torch.from_numpy(state).to(DEVICE)
 
     def apply_wall_repulsion(self, entity, force=0.5):
-        # Soft Repulsion: Pushes them away if they get too close to edges
-        margin = 50
-        if entity['x'] < margin: entity['vx'] += force
-        if entity['x'] > self.params['width'] - margin: entity['vx'] -= force
-        if entity['y'] < margin: entity['vy'] += force
-        if entity['y'] > self.params['height'] - margin: entity['vy'] -= force
-        
-        # Hard Clamp (prevent leaving screen)
-        entity['x'] = np.clip(entity['x'], 0, self.params['width'])
-        entity['y'] = np.clip(entity['y'], 0, self.params['height'])
+        # Perfect elastic bounce on axis-aligned bounds
+        min_x = 0.0
+        max_x = self.params['width']
+        min_y = 0.0
+        max_y = self.params['height']
+
+        if entity['x'] < min_x:
+            entity['x'] = min_x
+            entity['vx'] = abs(entity['vx'])
+        elif entity['x'] > max_x:
+            entity['x'] = max_x
+            entity['vx'] = -abs(entity['vx'])
+
+        if entity['y'] < min_y:
+            entity['y'] = min_y
+            entity['vy'] = abs(entity['vy'])
+        elif entity['y'] > max_y:
+            entity['y'] = max_y
+            entity['vy'] = -abs(entity['vy'])
 
     def resolve_collisions(self, entities, radius, push=0.2):
         for i in range(len(entities)):
@@ -237,14 +248,14 @@ class Simulation:
                     dx = best_target['x'] - p['x']
                     dy = best_target['y'] - p['y']
                     mag = np.sqrt(dx**2 + dy**2) + 1e-5
-                    p['vx'] += (dx/mag) * 0.25
-                    p['vy'] += (dy/mag) * 0.25
+                    p['vx'] += (dx/mag) * 0.25 * self.predator_speed
+                    p['vy'] += (dy/mag) * 0.25 * self.predator_speed
             
             # Friction & Walls
             speed = np.sqrt(p['vx']**2 + p['vy']**2)
-            if speed > self.agents_cfg['predator_speed']:
-                p['vx'] = (p['vx']/speed) * self.agents_cfg['predator_speed']
-                p['vy'] = (p['vy']/speed) * self.agents_cfg['predator_speed']
+            if speed > self.predator_speed:
+                p['vx'] = (p['vx']/speed) * self.predator_speed
+                p['vy'] = (p['vy']/speed) * self.predator_speed
             
             p['x'] += p['vx']; p['y'] += p['vy']
             self.apply_wall_repulsion(p, force=0.2) # Match prey reachability
@@ -265,8 +276,8 @@ class Simulation:
                 action = self.brain(state).cpu().numpy()
 
             # Physics
-            agent['vx'] += action[0] * 0.5
-            agent['vy'] += action[1] * 0.5
+            agent['vx'] += action[0] * 0.5 * self.fish_speed
+            agent['vy'] += action[1] * 0.5 * self.fish_speed
             
             # Add explicit wall avoidance reward implicitly via survival
             # But here we enforce physics so they don't get stuck

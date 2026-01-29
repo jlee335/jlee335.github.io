@@ -71,6 +71,7 @@
     let PREDATOR_STUN_SECONDS = 1.0;
     let EDGE_EAT_MARGIN = 30;
     let FISH_SPEED = 4.0;
+    let PREDATOR_SPEED = 6.5;
     let FISH_RADIUS_RATIO = 0.013;
     let PREDATOR_RADIUS_RATIO = 0.02;
     let ADJACENT_RADIUS_RATIO = 0.083;
@@ -205,6 +206,7 @@
                 vx: (Math.random() - 0.5) * 2,
                 vy: (Math.random() - 0.5) * 2,
                 alive: true,
+                deathAt: null,
                 color: 0,
                 radius: FISH_RADIUS
             });
@@ -225,6 +227,24 @@
     function getCornerRadius() {
         const base = Math.min(simBounds.width, simBounds.height) * CORNER_RADIUS_FACTOR;
         return Math.max(CORNER_RADIUS_MIN, Math.min(CORNER_RADIUS_MAX, base));
+    }
+
+    function respawnFish(agent) {
+        const fishMargin = Math.max(
+            0,
+            Math.min(
+                100,
+                (simBounds.width - FISH_RADIUS * 2) / 2,
+                (simBounds.height - FISH_RADIUS * 2) / 2
+            )
+        );
+        agent.x = simBounds.x + fishMargin + Math.random() * (simBounds.width - fishMargin * 2);
+        agent.y = simBounds.y + fishMargin + Math.random() * (simBounds.height - fishMargin * 2);
+        agent.vx = (Math.random() - 0.5) * 2;
+        agent.vy = (Math.random() - 0.5) * 2;
+        agent.alive = true;
+        agent.deathAt = null;
+        agent.radius = FISH_RADIUS;
     }
 
     function buildRoundedRectPath(radius) {
@@ -339,25 +359,25 @@
 
     function applyWallRepulsion(entity, force) {
         const radius = entity.radius || 0;
-        const maxInsetX = (simBounds.width - radius * 2) / 2;
-        const maxInsetY = (simBounds.height - radius * 2) / 2;
-        const margin = Math.max(0, Math.min(50, maxInsetX, maxInsetY));
-        const beforeX = entity.x;
-        const beforeY = entity.y;
+        const minX = simBounds.x + radius;
+        const maxX = simBounds.x + simBounds.width - radius;
+        const minY = simBounds.y + radius;
+        const maxY = simBounds.y + simBounds.height - radius;
 
-        if (entity.x < simBounds.x + radius + margin) entity.vx += force;
-        if (entity.x > simBounds.x + simBounds.width - radius - margin) entity.vx -= force;
-        if (entity.y < simBounds.y + radius + margin) entity.vy += force;
-        if (entity.y > simBounds.y + simBounds.height - radius - margin) entity.vy -= force;
+        if (entity.x < minX) {
+            entity.x = minX;
+            entity.vx = Math.abs(entity.vx);
+        } else if (entity.x > maxX) {
+            entity.x = maxX;
+            entity.vx = -Math.abs(entity.vx);
+        }
 
-        clampToRoundedRect(entity);
-
-        const pushX = entity.x - beforeX;
-        const pushY = entity.y - beforeY;
-        if (pushX || pushY) {
-            const mag = Math.sqrt(pushX * pushX + pushY * pushY) || 1;
-            entity.vx += (pushX / mag) * force;
-            entity.vy += (pushY / mag) * force;
+        if (entity.y < minY) {
+            entity.y = minY;
+            entity.vy = Math.abs(entity.vy);
+        } else if (entity.y > maxY) {
+            entity.y = maxY;
+            entity.vy = -Math.abs(entity.vy);
         }
     }
 
@@ -439,6 +459,7 @@
 
         const width = viewport.width;
         const height = viewport.height;
+        const nowMs = Number.isFinite(timestamp) ? timestamp : performance.now();
         const deltaSec = Number.isFinite(timestamp) && Number.isFinite(lastTimestamp)
             ? Math.min((timestamp - lastTimestamp) / 1000, 0.05)
             : (config?.simulation?.dt ?? 0.016);
@@ -466,6 +487,12 @@
         ctx.fillText(`Prey: ${aliveCount}`, simBounds.x + 14, simBounds.y + 12);
         ctx.fillText(`Predators: ${predators.length}`, simBounds.x + 14, simBounds.y + 30);
         ctx.restore();
+
+        agents.forEach(a => {
+            if (!a.alive && a.deathAt && nowMs - a.deathAt >= 5000) {
+                respawnFish(a);
+            }
+        });
 
         if (config?.debug === true) {
             const aliveAgents = agents.filter(a => a.alive);
@@ -541,15 +568,15 @@
                     let dx = bestTarget.x - p.x;
                     let dy = bestTarget.y - p.y;
                     let mag = Math.sqrt(dx * dx + dy * dy) + 1e-5;
-                    p.vx += (dx / mag) * 0.25;
-                    p.vy += (dy / mag) * 0.25;
+                    p.vx += (dx / mag) * 0.25 * PREDATOR_SPEED;
+                    p.vy += (dy / mag) * 0.25 * PREDATOR_SPEED;
                 }
             }
 
             let s = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-            if (s > config.agents.predator_speed) {
-                p.vx = (p.vx / s) * config.agents.predator_speed;
-                p.vy = (p.vy / s) * config.agents.predator_speed;
+            if (s > PREDATOR_SPEED) {
+                p.vx = (p.vx / s) * PREDATOR_SPEED;
+                p.vy = (p.vy / s) * PREDATOR_SPEED;
             }
             p.x += p.vx;
             p.y += p.vy;
@@ -599,6 +626,7 @@
                     }
                     if (Math.random() < eatenProbFinal) {
                         a.alive = false;
+                        a.deathAt = nowMs;
                     } else {
                         p.stun = Math.max(p.stun || 0, PREDATOR_STUN_SECONDS);
                         if (d > 0) {
@@ -667,6 +695,9 @@
             }
             if (Number.isFinite(config.agents.edge_eat_margin)) {
                 EDGE_EAT_MARGIN = config.agents.edge_eat_margin;
+            }
+            if (Number.isFinite(config.agents.predator_speed)) {
+                PREDATOR_SPEED = config.agents.predator_speed;
             }
             if (Number.isFinite(config.agents.fish_speed)) {
                 FISH_SPEED = config.agents.fish_speed;

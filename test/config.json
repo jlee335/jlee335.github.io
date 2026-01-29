@@ -9,7 +9,7 @@
     "agents": {
         "fish_count": 30,
         "predator_count": 3,
-        "fish_speed": 10.0,
+        "fish_speed": 3.0,
         "predator_speed": 5,
         "fish_radius": 0.010,
         "predator_radius": 0.016,
@@ -30,7 +30,7 @@
     },
     "debug": true,
     "evolution": {
-        "generations": 20,
+        "generations": 40,
         "population_size": 50,
         "mutation_rate": 0.05
     }
