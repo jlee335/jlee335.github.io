@@ -10,6 +10,9 @@ from concurrent.futures import ProcessPoolExecutor
 with open('config.json', 'r') as f:
     CONFIG = json.load(f)
 
+# Use GPU if available
+DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 class AgentBrain(nn.Module):
     def __init__(self, input_size, output_size):
         super().__init__()
@@ -56,7 +59,7 @@ class Simulation:
         self.speed_weight = self.agents_cfg.get('speed_weight', 0.4)
         
         # Inputs: [Ally_dx, Ally_dy, Pred_dx, Pred_dy, Vx, Vy, Wall_x, Wall_y]
-        self.brain = AgentBrain(8, 3) 
+        self.brain = AgentBrain(8, 3).to(DEVICE)
         if brain_weights:
             self.brain.load_state_dict(brain_weights)
         
@@ -138,7 +141,7 @@ class Simulation:
             wall_x, wall_y  # <--- The agents now "know" where they are
         ], dtype=np.float32)
         
-        return torch.FloatTensor(state)
+        return torch.from_numpy(state).to(DEVICE)
 
     def apply_wall_repulsion(self, entity, force=0.5):
         # Soft Repulsion: Pushes them away if they get too close to edges
@@ -251,7 +254,7 @@ class Simulation:
             # Brain
             state = self.get_sensor_data(agent)
             with torch.no_grad():
-                action = self.brain(state).numpy()
+                action = self.brain(state).cpu().numpy()
 
             # Physics
             agent['vx'] += action[0] * 0.5
